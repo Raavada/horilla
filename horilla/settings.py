@@ -22,14 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
+APP_DOMAIN = os.getenv("APP_DOMAIN", "")
+ALLOWED_HOSTS = [APP_DOMAIN]
 env = environ.Env(
     DEBUG=(bool, True),
     SECRET_KEY=(
         str,
         "django-insecure-j8op9)1q8$1&0^s&p*_0%d#pr@w9qj@1o=3#@d=a(^@9@zd@%j",
     ),
-    ALLOWED_HOSTS=(list, ["*"]),
+    ALLOWED_HOSTS=ALLOWED_HOSTS,
     CSRF_TRUSTED_ORIGINS=(list, ["http://localhost:8000"]),
 )
 
@@ -39,8 +40,7 @@ SECRET_KEY = os.getenv('MY_SECRET_KEY',
 'django-insecure-552!sbp8=_)072$8_#z1u4bw9%z@hb!ci5ml%xu(2j$$ehz4!4'
 )
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-APP_DOMAIN = os.getenv("APP_DOMAIN", "")
-ALLOWED_HOSTS = [APP_DOMAIN]
+
 # Application definition
 
 INSTALLED_APPS = [

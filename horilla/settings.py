@@ -39,8 +39,8 @@ SECRET_KEY = os.getenv('MY_SECRET_KEY',
 'django-insecure-552!sbp8=_)072$8_#z1u4bw9%z@hb!ci5ml%xu(2j$$ehz4!4'
 )
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
-
+APP_DOMAIN = os.getenv("APP_DOMAIN", "")
+ALLOWED_HOSTS = [APP_DOMAIN]
 # Application definition
 
 INSTALLED_APPS = [

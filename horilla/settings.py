@@ -185,7 +185,7 @@ MESSAGE_TAGS = {
 
 
 
-LOGIN_URL = "/login"
+#LOGIN_URL = "/login"
 
 
 SIMPLE_HISTORY_REVERT_DISABLED = True

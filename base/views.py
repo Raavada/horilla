@@ -185,6 +185,7 @@ def custom404(request):
     """
     Custom 404 method
     """
+    print("Custom 404")
     return render(request, "404.html")
 
 
@@ -558,6 +559,7 @@ def login_user(request):
     """
     This method is used render login template and authenticate user
     """
+    print("Login page")
     if request.method == "POST":
         username = request.POST["username"]
         password = request.POST["password"]

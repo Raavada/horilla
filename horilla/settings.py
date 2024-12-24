@@ -228,6 +228,8 @@ USE_L10N = True
 USE_TZ = True
 
 # Production settings
+SECURE_SSL_REDIRECT = True
+
 if not DEBUG:
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_SSL_REDIRECT = True
